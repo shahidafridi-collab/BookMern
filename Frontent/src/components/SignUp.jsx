@@ -21,7 +21,7 @@ export default function SignUp() {
         // console.log("User Info:", userInfo); // Debugging line to check the data being sent
 
         try {
-            await axios.post("http://localhost:3000/user/signup", userInfo)
+            await axios.post("https://bookwala.onrender.com/user/signup", userInfo)
             .then((res) => {
                 if(res.data) {
                         console.log(res.data);

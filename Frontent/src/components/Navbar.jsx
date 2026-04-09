@@ -35,13 +35,13 @@ const Navbar = () => {
 
 
   return (
-    <nav className="bg-gradient-to-r from-slate-900 to-slate-800 shadow-lg sticky top-0 z-50">
+    <nav className="bg-linear-to-r from-slate-900 to-slate-800 shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           
           {/* Logo/Brand */}
-          <div className="flex-shrink-0">
-            <a href="/" className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent hover:from-orange-500 hover:to-red-600 transition-all duration-300">
+          <div className="shrink-0">
+            <a href="/" className="text-2xl font-bold bg-linear-to-r from-orange-400 to-red-500 bg-clip-text text-transparent hover:from-orange-500 hover:to-red-600 transition-all duration-300">
               BookStore
             </a>
           </div>
@@ -87,7 +87,7 @@ const Navbar = () => {
               </svg>
             </form>
             
-            <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-5 py-2 rounded-lg font-medium hover:from-orange-600 hover:to-red-600 transform hover:scale-105 transition-all duration-200 shadow-md"
+            <button className="bg-linear-to-r from-orange-500 to-red-500 text-white px-5 py-2 rounded-lg font-medium hover:from-orange-600 hover:to-red-600 transform hover:scale-105 transition-all duration-200 shadow-md"
             onClick={onSubmit}>
               {authUser ? 'Logout' : 'Login'}
               {!authUser && (

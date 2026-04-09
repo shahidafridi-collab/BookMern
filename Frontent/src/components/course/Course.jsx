@@ -39,7 +39,7 @@ export default function Course() {
         const getBook = async () => {
             try {
 
-                const res = await fetch('http://localhost:3000/book');
+                const res = await fetch('https://bookwala.onrender.com/book');
                 
                 if (!res.ok) {
                     throw new Error('Failed to Fetch');

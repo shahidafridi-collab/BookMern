@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-import booksData from './../../public/list.js'
 import { useEffect } from 'react';
 
 
@@ -107,7 +106,7 @@ const HorizontalScrollBooks = () => {
   useEffect(() => {
     const getbook = async ()=> {
       try{
-        const res = await fetch('http://localhost:3000/book');
+        const res = await fetch('https://bookwala.onrender.com/book');
         if(!res.ok){
          throw new Error('Failed to Fetch');
         }

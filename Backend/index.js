@@ -8,7 +8,16 @@ import signupRoute from "./route/signup.route.js";
 
 dotenv.config();
 
-const app = express();
+app.use(cors({
+  origin: [
+    "https://bookwala.onrender.com",
+    "https://book-wala-sigma.vercel.app/"
+  ]
+}));
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 const PORT = process.env.PORT || 4000; // Good practice to check env for PORT
 const URI = process.env.MongoDBURI;
 
@@ -26,7 +35,7 @@ const connectDB = async () => {
 connectDB();
 
 // 2. Middlewares
-app.use(cors()); // Fix: Added parentheses ()
+app.use(cors()); 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
