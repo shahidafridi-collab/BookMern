@@ -12,7 +12,7 @@ app.use(cors({
     origin: [
         "https://book-wala-sigma.vercel.app", // ✅ your frontend
         "http://localhost:5173"  ,
-        "https://69d8cc637d5e50e8b00d5f9e--book-wala.netlify.app/"             // ✅ local frontend (for dev)
+        "https://book-wala.netlify.app/"             // ✅ local frontend (for dev)
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
