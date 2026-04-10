@@ -9,16 +9,17 @@ import signupRoute from "./route/signup.route.js";
 dotenv.config();
 const app = express();
 app.use(cors({
-  origin: [
-    "https://bookwala.onrender.com",
-    "https://book-wala-sigma.vercel.app/"
-  ],
-  credentials: true
+    origin: [
+        "https://book-wala-sigma.vercel.app", // ✅ your frontend
+        "http://localhost:5173"               // ✅ local frontend (for dev)
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const PORT = process.env.PORT || 4000; // Good practice to check env for PORT
+const PORT = process.env.PORT || 3000; // Good practice to check env for PORT
 const URI = process.env.MongoDBURI;
 
 // 1. Database Connection
@@ -35,7 +36,7 @@ const connectDB = async () => {
 connectDB();
 
 // 2. Middlewares
-app.use(cors()); 
+// app.use(cors()); 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
