@@ -11,7 +11,8 @@ const app = express();
 app.use(cors({
     origin: [
         "https://book-wala-sigma.vercel.app", // ✅ your frontend
-        "http://localhost:5173"               // ✅ local frontend (for dev)
+        "http://localhost:5173"  ,
+        "https://69d8cc637d5e50e8b00d5f9e--book-wala.netlify.app/"             // ✅ local frontend (for dev)
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
