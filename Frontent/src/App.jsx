@@ -7,6 +7,8 @@ import Footer from './components/Footer';
 import Course from './components/course/Course';
 import Signup from './components/SignUp';
 import { useAuth } from './authProvider/authProvider';
+import axios from 'axios';
+axios.defaults.withCredentials = true;
 
 
 function App() {

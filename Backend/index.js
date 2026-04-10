@@ -12,9 +12,9 @@ app.use(cors({
   origin: [
     "https://bookwala.onrender.com",
     "https://book-wala-sigma.vercel.app/"
-  ]
+  ],
+  credentials: true
 }));
-app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
