@@ -7,7 +7,7 @@ import bookRoute from "./route/book.route.js";
 import signupRoute from "./route/signup.route.js";
 
 dotenv.config();
-
+const app = express();
 app.use(cors({
   origin: [
     "https://bookwala.onrender.com",
