@@ -2,10 +2,10 @@
 import { Routes, Route, Navigate } from 'react-router';
 import Home from './components/home/Home';
 import './App.css';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Course from './components/course/Course';
-import Signup from './components/SignUp';
+import Navbar from './components/Navbar.jsx';
+import Footer from './components/Footer.jsx';
+import Course from './components/course/Course.jsx';
+import Signup from './components/SignUp.jsx';
 import { useAuth } from './authProvider/authProvider';
 
 
